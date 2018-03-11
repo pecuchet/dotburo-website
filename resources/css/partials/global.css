@@ -1,0 +1,63 @@
+
+/* -------------------------- Global styles */
+
+body {
+    font: 1.6em/1.5 aktiv-grotesk, 'Helvetica Neue', sans-serif;
+    font-variant-ligatures: common-ligatures;
+    -moz-font-feature-settings: "liga", "clig";
+    -webkit-font-feature-settings: "liga", "clig";
+    font-feature-settings: "liga", "clig";
+    overflow: hidden;
+}
+a,
+.btn-link {
+    color: #000;
+    text-decoration: underline;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a:focus,
+a:hover,
+.btn-link:focus,
+.btn-link:hover,
+.btn-link:active,
+.btn-link.active {
+    text-decoration: none;
+}
+::-moz-selection {
+    color: #FFF;
+    background: #000;
+}
+::selection {
+    color: #FFF;
+    background: #000;
+}
+
+/* -------------------------- Markdown styles */
+
+h5, h6 {
+    line-height: inherit;
+}
+b, strong {
+    font-weight: 500;
+}
+i, em {
+    font-style: italic;
+}
+sub {
+    font-variant-position: sub;
+    -moz-font-feature-settings: "subs";
+    -webkit-font-feature-settings: "subs";
+    font-feature-settings: "subs";
+}
+sup {
+    font-variant-position: super;
+    -moz-font-feature-settings: "sups";
+    -webkit-font-feature-settings: "sups";
+    font-feature-settings: "sups";
+}
+pre {
+    background: #eee;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+}

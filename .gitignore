@@ -1,0 +1,14 @@
+.DS_Store
+.idea
+.env
+.swp
+vendor
+node_modules
+storage/cache/*
+config.php
+config-deploy.js
+storage/portfolio/*
+storage/**/*.jpg
+storage/**/*.png
+storage/**/*.gif
+storage/**/*.mp4

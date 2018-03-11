@@ -1,0 +1,31 @@
+{
+  "name": "dotburo/website",
+  "type": "project",
+  "description": "dotburo's main website (based on Pico 1.0)",
+  "keywords": [
+    "flat file CMS",
+    "Pico"
+  ],
+  "version": "5.1.0",
+  "homepage": "https://dotburo.org/",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "dotburo",
+      "email": "hello@dotburo.org",
+      "homepage": "https://dotburo.org/",
+      "role": "developer, designer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.7",
+    "twig/twig": "2.4.*",
+    "michelf/php-markdown": ">=1.8"
+  },
+  "autoload": {
+    "files": [
+      "pico/helpers.php",
+      "pico/pico.php"
+    ]
+  }
+}

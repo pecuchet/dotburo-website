@@ -1,0 +1,12 @@
+User-agent: Mediapartners-Google
+User-agent: AdsBot-Google-Mobile
+User-agent: Adsbot-Google
+Disallow: /*
+
+User-agent: *
+Disallow: /vendor/*
+Disallow: /browser/*
+Disallow: /coolsaet/*
+Disallow: /leontine/*
+Disallow: /storage/cache/*
+Disallow: /storage/portfolio/*

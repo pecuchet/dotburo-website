@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# dotburo: http://dotburo.org/ns#">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link id="favicon" rel="shortcut icon" href="/favicon.ico">
+    <title>{{ is_front_page ? site_title : meta.title~config.site_title_sep~site_title }}</title>
+    <meta name="description" content="{{ meta.description }}">
+    <meta name="author" content="{{ config.site_author }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/images/dotburo_icon-180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/resources/images/dotburo_icon-black.svg" color="#0000ff">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://use.typekit.net/ocs3rka.css">
+    <link rel="stylesheet" href="{{ base_url }}/dist/css/index.min.{{ config.cache_bust }}.css" type="text/css">
+    <link rel="alternate" type="application/atom+xml" title="{{ site_title }}'s news and projects" href="{{ base_url }}/feed">
+    <meta id="site-title" property="og:site_name" content="{{ site_title }}">
+    <meta property="og:title" content="{{ is_front_page ? site_title : current_page.title~config.site_title_sep~site_title }}">
+    <meta property="og:type" content="{{ is_front_page ? 'website' : 'dotburo:project' }}">
+    <meta property="og:url" content="{{ current_page.url }}">
+    <meta property="og:image" content="{{ is_front_page ? '/resources/images/dotburo_opengraph.jpg' : ( meta.image ? base_url~meta.image : '' ) }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ahcoolsaet">
+    <meta name="twitter:creator" content="@ahcoolsaet">
+    <meta name="twitter:title" content="{{ is_front_page ? site_title : meta.title~config.site_title_sep~site_title }}">
+    <meta name="twitter:description" content="{{ meta.description }}">
+    <meta name="twitter:image" content="{{ is_front_page ? '/resources/images/dotburo_opengraph.jpg' : ( meta.image ? base_url~meta.image : '' ) }}">
+</head>
+<body>
+<div id="wrap" itemscope itemtype="http://schema.org/Organization">
+    <header id="header"><h1 class="btn-link" itemprop="name"><a href="{{ base_url }}">{{ site_title }}</a></h1><a
+            itemprop="url" href="{{ base_url }}" id="btn-close" class="{{ is_single ? '' : 'hide '}}right btn-link">&times;</a>
+        <meta itemprop="logo" content="{{ base_url }}/resources/images/dotburo_opengraph.jpg">
+    </header>
+    <div id="pages">
+        <div id="pages-inner">
+            <div class="page">
+                <div id="grid">
+                    {% if meta.title != "Error 404" %}
+                        {% include 'templates/grid.html' %}
+                    {% else %}
+                        <p class="err-404">{{ meta.description }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            <footer class="page invisible">
+                <div id="contact">
+                    <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <a rel="author" href="https://arnaudcoolsaet.eu" target="_blank" itemprop="sameAs">Arnaud Coolsaet</a><br>
+                        <span id="mail"></span><br>
+                        <a href="tel:+32483094922"><span itemprop="telephone">+32 (0) 483 094 922</span></a>
+                        <br><br>
+                        <a rel="alternate" href="{{ base_url }}/feed">RSS</a> &bull;
+                        <a href="https://github.com/pecuchet" target="_blank" itemprop="sameAs">Github</a><br><br>&#x2668;
+                    </address>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div id="nav-mobile" class="left" role="navigation" aria-label="Switch sections">
+        <button data-id="0" class="btn-link active">online</button>
+        <button data-id="1" class="btn-link">offline</button>
+        <button data-id="2" class="btn-link">blog</button>
+    </div>
+    <a href="#contact" role="button" id="btn-contact" class="btn-link right">contact</a></div>
+<div id="thumb"></div>
+<script src="{{ base_url }}/dist/js/index.min.{{ config.cache_bust }}.js"></script>
+</body>
+</html>

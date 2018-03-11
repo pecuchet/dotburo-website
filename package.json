@@ -1,0 +1,33 @@
+{
+  "name": "@dotburo/website",
+  "description": "dotburo's main website",
+  "keywords": [
+    "flat file CMS",
+    "Pico"
+  ],
+  "homepage": "https://dotburo.org/",
+  "version": "5.1.0",
+  "main": "resources/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dotburo <hello@dotburo.org> (https://dotburo.org/)",
+  "license": "GPL-3.0+",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pecuchet/dotburo-website.git"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "almond": "^0.3.3",
+    "grunt-exec": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-requirejs": "^1.0.0"
+  },
+  "dependencies": {
+    "go-scroll-to": "^1.0.3",
+    "requirejs": "^2.3.5"
+  }
+}
