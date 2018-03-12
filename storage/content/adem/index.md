@@ -16,4 +16,4 @@ a bike, so as to give the user real time feedback and, at the same time,
 it sends the data to a server.  
 
 <br>
-The logo and <a href="http://ik-adem.be" target="_blank">website</a> were created together with the whole ADEM team.
+The logo and <a href="http://ik-adem.be" target="_blank" rel="noopener">website</a> were created together with the whole ADEM team.

@@ -13,4 +13,4 @@ A logo playfully denoting science, technology, engineering and mathematics (STEM
 for a small Ghent based association aiming at coaching trainers for STEM related workshops.
   
 <br>
-<a href="http://www.stemingent.be" target="_blank">www.stemingent.be</a>
+<a href="http://www.stemingent.be" target="_blank" rel="noopener">www.stemingent.be</a>

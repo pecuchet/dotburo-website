@@ -13,4 +13,4 @@ Inspired by early desktop computer graphical user interfaces (XEROX Star, Commod
 this is a website for Axel Cleeremans, mashing up his proliferate academic and geeky publications.
   
 <br>
-<a href="http://axc.ulb.be/" target="_blank">axc.ulb.be</a>
+<a href="http://axc.ulb.be/" target="_blank" rel="noopener">axc.ulb.be</a>

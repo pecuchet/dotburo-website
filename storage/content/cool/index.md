@@ -13,4 +13,4 @@ and foreign partners from University of Sussex and University College London.
 The overarching goal of COOL is to contribute to the understanding of the mechanisms of conscious and unconscious learning.
 
 <br>
-<a href="http://www.iap-cool.net" target="_blank">www.iap-cool.net</a>
+<a href="http://www.iap-cool.net" target="_blank" rel="noopener">www.iap-cool.net</a>

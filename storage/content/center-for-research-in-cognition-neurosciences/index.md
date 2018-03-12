@@ -12,4 +12,4 @@ Visual identity and website for the Center for Research in Cognition & Neuroscie
 at ULB in Brussels.
   
 <br>
-<a href="http://crcn.ulb.ac.be" target="_blank">crcn.ulb.ac.be</a>
+<a href="http://crcn.ulb.ac.be" target="_blank" rel="noopener">crcn.ulb.ac.be</a>

@@ -9,4 +9,4 @@ Date: 2014-11-01
 Modified: 2014-11-01
 */
 HTML template and design for Louvain Partnership Research on Ecological and Social Transition,
-realised for <a href="http://www.switch-asbl.org" target="_blank">Switch ASBL</a> in Brussels.
+realised for <a href="http://www.switch-asbl.org" target="_blank" rel="noopener">Switch ASBL</a> in Brussels.

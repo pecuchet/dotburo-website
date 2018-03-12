@@ -11,4 +11,4 @@ Modified: 2016-09-09
 Website for artist and philosopher Elisabeth Van Dam.
   
 <br>
-<a href="http://elisabethvandam.com" target="_blank">elisabethvandam.com</a>
+<a href="http://elisabethvandam.com" target="_blank" rel="noopener">elisabethvandam.com</a>
