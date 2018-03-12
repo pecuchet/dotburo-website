@@ -1,5 +1,6 @@
 {
 	"name": "dotburo",
+	"short_name": "db",
 	"icons": [
 		{
 			"src": "\/resources\/images\/dotburo_icon-192.png",
