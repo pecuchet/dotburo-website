@@ -67,7 +67,8 @@ header h1 {
 .col.open.as-blog {
     width: 33%;
 }*/
-.col h2 {
+.col h2,
+.title-small {
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: .05em;
@@ -134,7 +135,9 @@ header h1 {
 }
 .content.as-blog article {
     width: 90%;
-    margin-top: 33px;
+}
+.content.as-blog header p {
+    margin-bottom: 20px;
 }
 .content h2 {
     margin-bottom: 38px;
@@ -142,7 +145,7 @@ header h1 {
 .content.as-blog h2 {
     text-transform: none;
     font-size: 40px;
-    line-height: 1.25;
+    line-height: 1.2;
     font-weight: 500;
     letter-spacing: normal;
 }
@@ -156,11 +159,6 @@ header h1 {
     margin: 2em 0;
 }
 
-/* --------------------------------------------- Gists */
-
-.gist {
-    margin-left: 1px;
-}
 
 /* --------------------------------------------- Footer */
 
@@ -229,6 +227,9 @@ header h1 {
         padding-left: 0;
         width: 75%;
     }
+    .content.as-blog article {
+        width: 100%;
+    }
     .content h2 {
         margin-bottom: 22px;
     }
@@ -265,7 +266,11 @@ header h1 {
 }
 @media (max-height : 600px) {
     #wrap {
+        padding-top: 4em;
         padding-bottom: 3em;
+    }
+    #header {
+        top: .5em;
     }
     #footer {
         bottom: 0;
@@ -273,9 +278,9 @@ header h1 {
 }
 @media (max-height : 500px) {
     #wrap {
-        padding-top: 4em;
+        padding-top: 3.5em;
     }
     #header {
-        top: .3em;
+        top: .2em;
     }
 }
