@@ -1,7 +1,12 @@
 /*
 Title: Real-time video chroma key experiments on a Raspberry Pi
-Description: More info soon
 Date: 2016-12-11
-Modified: 2016-12-11
-Read: 0
+Modified: 2018-03-14
+Read: 1
 */
+
+An early test result trying out a real-time background subtraction algorithm on a raspberry pi. 
+At the moment the output frame rate is way too slow, clocking at ±6fps... 
+hopefully better results will come out soon!  
+<br>
+<img src="/storage/content/blog/2016/12/media/rpi-chroma-key-test.jpg" alt="RPI Chroma key test">
