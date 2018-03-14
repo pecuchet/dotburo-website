@@ -18,7 +18,7 @@
     <link rel="mask-icon" href="/resources/images/dotburo_icon-black.svg" color="#0000ff">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://use.typekit.net/ocs3rka.css">
-    <link rel="stylesheet" href="{{ base_url }}/dist/css/index.min.{{ config.cache_bust }}.css" type="text/css">
+    <style>{{source('/css/index.min.css')}}</style>
     <link rel="alternate" type="application/atom+xml" title="{{ site_title }}'s news and projects" href="{{ base_url }}/feed">
     <meta id="site-title" property="og:site_name" content="{{ site_title }}">
     <meta property="og:title" content="{{ is_front_page ? site_title : current_page.title~config.site_title_sep~site_title }}">
@@ -52,12 +52,12 @@
             <footer class="page invisible">
                 <div id="contact">
                     <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <a rel="author" href="https://arnaudcoolsaet.eu" target="_blank" itemprop="sameAs">Arnaud Coolsaet</a><br>
+                        <a rel="author noopener" href="https://arnaudcoolsaet.eu" target="_blank" itemprop="sameAs">Arnaud Coolsaet</a><br>
                         <span id="mail"></span><br>
                         <a href="tel:+32483094922"><span itemprop="telephone">+32 (0) 483 094 922</span></a>
                         <br><br>
                         <a rel="alternate" href="{{ base_url }}/feed">RSS</a> &bull;
-                        <a href="https://github.com/pecuchet" target="_blank" itemprop="sameAs">Github</a><br><br>&#x2668;
+                        <a href="https://github.com/pecuchet" target="_blank" rel="noopener" itemprop="sameAs">Github</a><br><br>&#x2668;
                     </address>
                 </div>
             </footer>
@@ -72,6 +72,6 @@
     </div>
     <a href="#contact" role="button" id="btn-contact" class="btn-link right">contact</a></div>
 <div id="thumb"></div>
-<script src="{{ base_url }}/dist/js/index.min.{{ config.cache_bust }}.js"></script>
+<script src="/dist/js/index.min.{{ config.cache_bust }}.js"></script>
 </body>
 </html>

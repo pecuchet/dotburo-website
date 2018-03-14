@@ -67,14 +67,13 @@
                 {% else %}
                     <span class="item">
                 {% endif %}
-                <h3 itemprop="name">{{ item.title }}</h3>
+                <h3 itemprop="headline">{{ item.title }}</h3>
                 {% if item.description %}
                     <p>{{ item.description }}</p>
                 {% endif %}
                 {% if item.read == 'yes' %}
-                    → read article
+                    <span>→ read</span>
                 {% endif %}
-                <footer><time itemprop="dateCreated" datetime="{{ item.date }}">{{ item.date|date('Y m d') }}</time></footer>
                 {% if item.read == 'yes' %}</a>{% else %}</span>{% endif %}
             </article>
         </li>
