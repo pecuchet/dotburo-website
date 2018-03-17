@@ -65,12 +65,14 @@
                        data-title="{{ item.title }}"
                        role="menuitem"
                        rel="bookmark">
+                        <time datetime="{{ item.date }}" itemprop="datePublished">{{ item.date|date('F j, Y') }}</time>
                         <h3 itemprop="headline">{{ item.title }}</h3>
                         {% if item.description %}<p>{{ item.description }}</p>{% endif %}
-                        <span>→ read</span>
+                        <span>→</span>
                     </a>
                 {% else %}
                     <div class="item">
+                        <time datetime="{{ item.date }}" itemprop="datePublished">{{ item.date|date('F j, Y') }}</time>
                         <h3 itemprop="headline">{{ item.title }}</h3>
                         {% if item.description %}<p>{{ item.description }}</p>{% endif %}
                     </div>

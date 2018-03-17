@@ -3,9 +3,9 @@
         <header>
             {% if active_category == 'blog' %}
                 <p class="title-small">
-                    <time itemprop="datePublished" datetime="{{ meta.date }}">{{ meta.date|date('M d, Y') }}</time>
+                    <time itemprop="datePublished" datetime="{{ meta.date }}">{{ meta.date|date('F j, Y') }}</time>
                     {% if meta.date != meta.date_modified %}
-                        [updated: <time itemprop="dateModified" datetime="{{ meta.date_modified }}">{{ meta.date_modified|date('d/m/Y') }}</time>]
+                        [updated: <time itemprop="dateModified" datetime="{{ meta.date_modified }}">{{ meta.date_modified|date('d.m.Y') }}</time>]
                     {% endif %}
                 </p>
                 <h2 itemprop="mainEntityOfPage headline">{{ meta.title }}</h2>

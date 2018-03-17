@@ -109,6 +109,13 @@ header h1 {
 .col.blog a.item h3 {
     text-decoration: underline;
 }
+.col.blog a.item.active h3,
+.no-touch .col.blog a.item:hover h3 {
+    text-decoration: none;
+}
+.col.blog a.item.active span {
+    display: none;
+}
 
 /* --------------------------------------------- HOME : grid tooltip images */
 
