@@ -20,10 +20,10 @@ the latter takes care of the actual video, as well as the subtitles and rolling 
 of the images.  
 
 <br>
-The project is currently on show at <a href="http://marres.org/nl/programme/now/marres-currents-4/" target="_blank" rel="noopener">Marres Currents #4: Running Time</a> until February 12, 2017.
+The project was on show at <a href="http://marres.org/nl/programme/now/marres-currents-4/" target="_blank" rel="noopener">Marres Currents #4: Running Time</a> until February 12, 2017.
 
 <br>
-As an example, below is the edition of December 13, 2016.  
+As an example, below is the edition of December 14, 2016.  
 
 <br>
 <video controls preload="auto">
