@@ -45,10 +45,10 @@ module.exports = function(grunt) {
         },
         exec: {
             deploy: {
-                command: "rsync -vzrp --exclude-from '.rsyncignore' ./dist/* " + config.deploy.path
+                command: "rsync -vzrph --exclude-from '.rsyncignore' ./dist/* " + config.deploy.path
             },
             flush_cache : {
-                command: 'rsync -arv --delete ' + config.caches.join(' ')
+                command: 'rsync -avh --delete storage/cache/templates/ ' + config.cache
             }
         },
         watch: {
