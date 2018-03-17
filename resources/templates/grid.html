@@ -59,22 +59,22 @@
         <li itemscope itemtype="http://schema.org/BlogPosting">
             <article>
                 {% if item.read == 'yes' %}
-                    <a class="item" itemprop="url"
+                    <a class="item"
+                       itemprop="url"
                        href="{{ item.slug }}"
                        data-title="{{ item.title }}"
                        role="menuitem"
                        rel="bookmark">
+                        <h3 itemprop="headline">{{ item.title }}</h3>
+                        {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+                        <span>→ read</span>
+                    </a>
                 {% else %}
-                    <span class="item">
+                    <div class="item">
+                        <h3 itemprop="headline">{{ item.title }}</h3>
+                        {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+                    </div>
                 {% endif %}
-                <h3 itemprop="headline">{{ item.title }}</h3>
-                {% if item.description %}
-                    <p>{{ item.description }}</p>
-                {% endif %}
-                {% if item.read == 'yes' %}
-                    <span>→ read</span>
-                {% endif %}
-                {% if item.read == 'yes' %}</a>{% else %}</span>{% endif %}
             </article>
         </li>
         {% endfor %}
