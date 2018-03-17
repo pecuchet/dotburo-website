@@ -7,7 +7,7 @@ URL: http://whydopeoplekeepphotographs.net/
 Image: wdkp-1.jpg
 
 Date: 2016-06-21
-Modified: 2016-12-13
+Modified: 2018-03-17
 */
 *Why do people keep photographs?* is a “database movie” project by <a href="http://www.tessagroenewoud.nl/" target="_blank" rel="noopener">Tessa Groenewoud</a>.
 Every day a video is automatically generated based on a passage from the crime novel ‘Mrs. McGinty’s Dead’ (1952) by Agatha Christie.
@@ -27,7 +27,7 @@ As an example, below is the edition of December 13, 2016.
 
 <br>
 <video controls preload="auto">
-    <source src="http://whydopeoplekeepphotographs.net/videos/wdpkp-2016-12-13.mp4" type="video/mp4">
+    <source src="http://whydopeoplekeepphotographs.net/videos/wdpkp-2016-12-14.mp4" type="video/mp4">
 </video>
 
 <br>
