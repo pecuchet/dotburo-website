@@ -34,6 +34,14 @@ class DB5
     }
 
     /**
+     * @return void
+     */
+    public function before_404_load_content ()
+    {
+        $this->is_single = false;
+    }
+
+    /**
      * Add meta tags.
      * @param $headers
      */

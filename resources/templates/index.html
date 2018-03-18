@@ -34,8 +34,11 @@
 </head>
 <body>
 <div id="wrap" itemscope itemtype="http://schema.org/Organization">
-    <header id="header"><h1 class="btn-link" itemprop="name"><a href="{{ base_url }}">{{ site_title }}</a></h1><a
-            itemprop="url" href="{{ base_url }}" id="btn-close" class="{{ is_single ? '' : 'hide '}}right btn-link">&times;</a>
+    <header id="header">
+        <h1 class="btn-link" itemprop="name">
+            <a href="{{ base_url }}">{{ site_title }}</a>
+        </h1>
+        <a itemprop="url" href="{{ base_url }}" id="btn-close" class="{{ is_single ? '' : 'hide '}}right btn-link">&times;</a>
         <meta itemprop="logo" content="{{ base_url }}/resources/images/dotburo_opengraph.jpg">
     </header>
     <div id="pages">
@@ -45,7 +48,10 @@
                     {% if meta.title != "Error 404" %}
                         {% include 'templates/grid.html' %}
                     {% else %}
-                        <p class="err-404">{{ meta.description }}</p>
+                        <div class="err-404">
+                            <p>{{ meta.description }}</p>
+                            {{ content }}
+                        </div>
                     {% endif %}
                 </div>
             </div>
