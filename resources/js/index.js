@@ -1,7 +1,9 @@
 ;(function (w) {
     'use strict';
 
-    var d = w.document;
+    var d = w.document,
+        loc = w.location,
+        pathname = loc.pathname;
 
     require.config({
         baseUrl: '/resources/js',
@@ -22,10 +24,10 @@
         var isWin = !w.navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i),
             state = {
                 pageLoad: 1,
-                isSingle: w.location.pathname !== '/',
+                isSingle: pathname !== '/' && pathname !== '/index.php',
                 siteTitle: d.getElementById('site-title').getAttribute('content'),
                 title: d.title,
-                url: w.location.href
+                url: loc.href
             };
 
         if (isWin) d.body.classList.add('is-win');
@@ -56,7 +58,7 @@
         // Set up the page, if needed
         if (state.isSingle) {
             app.views.page = new Page({});
-            app.views.grid.shiftGrid(d.querySelector('.col.open'), /(blog)/.test(w.location.pathname));
+            app.views.grid.shiftGrid(d.querySelector('.col.open'), /(blog)/.test(pathname));
             app.views.grid.onColumnExpanded();
         }
 
