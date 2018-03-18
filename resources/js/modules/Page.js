@@ -28,7 +28,7 @@ define([
                 this.fetch(options, state);
                 app.toggleCloseBtn(1);
             } else {
-                //this.gaTrackVideo();
+                this.gaTrackVideo();
             }
 
             // on page load and through history,
@@ -98,7 +98,7 @@ define([
             var parent = this.options.column.getElementsByClassName('xhr-root')[0];
             parent.innerHTML = templates.content(data);
             this.evalGists(parent);
-            //this.gaTrackVideo();
+            this.gaTrackVideo();
         },
 
         evalGists: function (parent) {
@@ -110,6 +110,33 @@ define([
 
         destroy: function () {
             this.options.column.innerHTML = '';
+        },
+
+        gaTrackVideo : function () {
+            var videos = this.options.column.getElementsByTagName('video'),
+                l = videos.length, i = 0,
+                sentWatched = {},
+                sentPlay = {},
+                play = function () {
+                    // play started, only sent once
+                    if ( !sentPlay[this.currentSrc] ) {
+                        w.ga( 'send', 'event', 'Videos', 'Play', this.currentSrc );
+                        sentPlay[this.currentSrc] = 1;
+                    }
+                },
+                watched = function () {
+                    var currentTime = this.currentTime;
+                    // Watched 75%, only send once
+                    if ( !sentWatched[this.currentSrc] && ( currentTime > 0.75 * ( this.duration ) ) ) {
+                        w.ga( 'send', 'event', 'Videos', 'Watched 75%', this.currentSrc );
+                        sentWatched[this.currentSrc] = 1;
+                    }
+                };
+
+            for ( i; i < l; i++ ) {
+                videos[i].addEventListener( 'play', play );
+                videos[i].addEventListener( 'timeupdate', watched );
+            }
         }
     };
     return Page;
