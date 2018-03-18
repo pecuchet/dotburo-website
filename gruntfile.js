@@ -47,6 +47,9 @@ module.exports = function(grunt) {
             deploy: {
                 command: "rsync -vzrph --exclude-from '.rsyncignore' ./dist/* " + config.deploy.path
             },
+            deploy_content: {
+                command: "rsync -vzrph --exclude-from '.rsyncignore' ./storage/content/* " + config.deploy.content_path
+            },
             flush_cache : {
                 command: 'rsync -avh --delete storage/cache/templates/ ' + config.cache
             }
@@ -70,7 +73,9 @@ module.exports = function(grunt) {
     grunt.registerTask('concat:js', ['requirejs:concat']);
 
     grunt.registerTask('flush', ['exec:flush_cache']);
-    grunt.registerTask('deploy', ['exec:deploy']);
+    grunt.registerTask('deploy:assets', ['exec:deploy']);
+    grunt.registerTask('deploy:content', ['exec:deploy_content']);
+    grunt.registerTask('deploy', ['exec:deploy_content', 'exec:deploy', 'exec:flush_cache']);
 
     grunt.registerTask('default', ['min:html','concat:css','concat:js']);
 };
