@@ -24,7 +24,7 @@
         var isWin = !w.navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i),
             state = {
                 pageLoad: 1,
-                isSingle: pathname !== '/' && pathname !== '/index.php' && !d.getElementsByClassName('.err-404'),
+                isSingle: pathname !== '/' && pathname !== '/index.php' && !d.getElementsByClassName('.err-404').length,
                 siteTitle: d.getElementById('site-title').getAttribute('content'),
                 title: d.title,
                 url: loc.href
