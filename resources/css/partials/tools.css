@@ -25,3 +25,6 @@
     line-height: 1.1;
     padding: 1em;
 }
+.txt-strike {
+    text-decoration: line-through;
+}
