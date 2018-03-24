@@ -1,6 +1,6 @@
 /*
 Title: Meet-up Ghent Tech Dok-Noord
-Description: The ADEM device team will present its open source air pollution measurement device at DOK Noord tonight.
+Description: The <a href="https://dotburo.org/adem/" rel="noopener">ADEM</a> team presents its open source air pollution measurement device tonight.
 Date: 2016-08-25
 Modified: 2016-08-25
 Read: 0
