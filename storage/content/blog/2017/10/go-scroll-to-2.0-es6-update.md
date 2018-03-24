@@ -3,6 +3,7 @@ Title: Go-scroll-to upgraded to ES6
 Date: 2017-10-03
 Modified: 2017-10-03
 Read: 1
+Keywords: javascript, es6
 */
 
 Our lightweight page scrolling package go-scroll-to has been rewritten as 

@@ -3,6 +3,7 @@ Title: Real-time video chroma key experiments on a Raspberry Pi
 Date: 2016-12-11
 Modified: 2018-03-14
 Read: 1
+Keywords: Python, Raspberry Pi, video
 */
 
 An early test result trying out a real-time background subtraction algorithm on a raspberry pi. 

@@ -3,6 +3,7 @@ Title: Caching HTTP requests with Laravel 5.5 and Guzzle&nbsp;6
 Date: 2018-03-11
 Modified: 2018-03-11
 Read: 1
+Keywords: php, laravel, guzzle, cache
 */
 We needed a simple and unobtrusive way to cache our multiple API queries within Laravel. 
 It turns out this is quite easy with Guzzle. Just call the class beneath like so:  
