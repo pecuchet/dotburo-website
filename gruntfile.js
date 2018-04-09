@@ -45,13 +45,13 @@ module.exports = function(grunt) {
         },
         exec: {
             deploy: {
-                command: "rsync -zrph --exclude-from '.rsyncignore' ./dist/* " + config.deploy.path
+                command: "rsync -zrphP --exclude-from '.rsyncignore' ./dist/* " + config.deploy.path
             },
             deploy_content: {
-                command: "rsync -zrph --exclude-from '.rsyncignore' ./storage/content/* " + config.deploy.content_path
+                command: "rsync -zrphP --exclude-from '.rsyncignore' ./storage/content/* " + config.deploy.content_path
             },
             flush_cache : {
-                command: 'rsync -ah --delete storage/cache/templates/ ' + config.cache
+                command: 'rsync -ahP --delete storage/cache/templates/ ' + config.cache
             }
         },
         watch: {
