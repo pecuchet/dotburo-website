@@ -1,7 +1,7 @@
 /*
 Title: Caching HTTP requests with Laravel 5.5 and Guzzle&nbsp;6
 Date: 2018-03-11
-Modified: 2018-03-24
+Modified: 2018-04-09
 Read: 1
 Keywords: php, laravel, guzzle, cache
 */
