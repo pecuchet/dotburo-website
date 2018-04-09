@@ -4,7 +4,7 @@ Description: Henri David Thoreau bookkeeping for Walden on the wooden fence at T
 Category: offline
 Type: Lettering
 URL: http://timelab.org/
-Image: timelab-thoreau-3.jpg
+Image: timelab-thoreau-1.jpg
 
 Date: 2015-09-05
 Modified: 2016-09-09
