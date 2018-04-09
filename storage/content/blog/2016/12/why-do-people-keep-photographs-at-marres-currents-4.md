@@ -1,9 +1,9 @@
 /*
 Title: Why do people keep photographs? at Marres Currents #4: Running Time
 Date: 2016-12-11
-Modified: 2018-03-17
+Modified: 2018-04-09
 Read: 1
-Keywords; Python, FFmpeg, video
+Keywords; Python, FFmpeg, video, media art
 */
 
 Tessa Groenewoud presents her project in Maastricht (NL) and on 
@@ -23,5 +23,5 @@ and on
 See, on the latter, the screenshots of how the project was hacked into the venue's website.  
 <br>
 <video preload="auto" muted="" controls>
-    <source src="http://whydopeoplekeepphotographs.net/videos/wdpkp-2017-04-12.mp4" type="video/mp4">
+    <source src="http://whydopeoplekeepphotographs.net/videos/latest" type="video/mp4">
 </video>
