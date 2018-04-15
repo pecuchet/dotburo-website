@@ -7,12 +7,12 @@ URL: http://whydopeoplekeepphotographs.net/
 Image: wdkp-1.jpg
 
 Date: 2016-06-21
-Modified: 2018-04-09
+Modified: 2018-04-10
 */
-*Why do people keep photographs?* is a “database movie” project by [Tessa Groenewoud](http://www.tessagroenewoud.nl/){target=_blank rel=noopener} 
+*Why do people keep photographs?* is a “database movie” project by [Tessa Groenewoud](https://tessagroenewoud.nl/){target=_blank rel=noopener} 
 and coded by dotburo. *Every day a video is automatically generated based on a passage from the crime novel ‘Mrs. McGinty’s Dead’ (1952) by Agatha Christie.
 Each word from the fragment is used to select the day’s highest ranking image result in the search engines of Bing, Google or Yahoo.* 
-The [project website](http://whydopeoplekeepphotographs.net/){rel=noopener} displays the daily video and the archive of past generated movies.  
+The [project website](https://whydopeoplekeepphotographs.net/){rel=noopener} displays the daily video and the archive of past generated movies.  
 <br>
 The generation of the HD video is done through Python and FFmpeg. The former performs 
 the image requests for each word of the passage and builds the FFmpeg commands; 
@@ -24,7 +24,7 @@ in a H264 mp4 movie, to finally be sent to the HTTP server of whydopeoplekeeppho
 The [source code of the project](https://github.com/pecuchet/wdpkp-4){target=_blank rel=noopener} is on Github. Here is the result:
 <br>
 <video preload="auto" muted="" controls>
-    <source src="http://whydopeoplekeepphotographs.net/videos/latest" type="video/mp4">
+    <source src="https://whydopeoplekeepphotographs.net/videos/latest" type="video/mp4">
 </video>
 
 <br>

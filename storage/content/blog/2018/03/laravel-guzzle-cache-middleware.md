@@ -13,14 +13,14 @@ The project has a wrapper interface around Guzzle's ClientInterface and each
 implementation of the former corresponds to one of the APIs the project is talking to. 
 This way I can manage all the requests in a likely fashion, while taking care of the
 specifics of each API. I can, for example, instantiate the below [GuzzleResponseCache](https://gist.github.com/pecuchet/90a2246a0c381b9a9a82fbe452ab4301){target=_blank rel=noopener}
- with a TTL specific to each API.  
+ with a specific TTL.  
 <br>
 The GuzzleResponseCache class is a [Guzzle middleware](http://docs.guzzlephp.org/en/stable/handlers-and-middleware.html#middleware){target=_blank rel=noopener}, 
 which means that it handles the intermediary execution of a *handler*, 
-i.e. a function that modifies the request options and response of HTTP request performed by Guzzle.  
+i.e. a function that modifies the request options and response of the HTTP request performed by Guzzle.  
 <br>
 To make it work the GuzzleResponseCache middleware needs to be added to
-a handler stack which will be traversed while doing the request. Like so:    
+a handler stack, which will be traversed while doing the request. Like so:    
 <br>
 ```
 $guzzleHandlerStack = \GuzzleHttp\HandlerStack:create();
