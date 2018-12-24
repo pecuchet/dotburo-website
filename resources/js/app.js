@@ -24,6 +24,7 @@ define([
             this.closeBtn = d.getElementById( 'btn-close' );
             this.contactBtn = d.getElementById( 'btn-contact' );
 
+            this.track();
             this.setSizable();
             this.bindHandlers();
             this.load();
@@ -62,8 +63,6 @@ define([
                     self.shiftPages(e);
                 });
             }
-
-            this.ga();
         },
 
         insertMail : function () {
@@ -81,10 +80,13 @@ define([
          * @param state
          */
         setHistory : function ( state ) {
+
+            state.time = (new Date()).getTime();
+            this.resetDocument( state );
+
             if ( this.hasHistory ) {
                 w.history.pushState( state, state.title, state.url );
             }
-            this.resetDocument( state );
         },
 
         /**
@@ -92,12 +94,15 @@ define([
          * @param state
          */
         handlePopState : function ( state ) {
+
+            state.time = (new Date()).getTime();
+            this.resetDocument( state );
+
             if ( !state.id ) {
                 this.closePage( 0 );
             } else {
                 this.views.grid.launchPage( d.getElementById( state.id ), state );
             }
-            this.resetDocument( state );
         },
 
         /**
@@ -109,8 +114,11 @@ define([
                 ? this.initial.siteTitle
                 : state.title + ' • ' + this.initial.siteTitle;
 
-            if ( w.ga ) {
-                w.ga( 'send', 'pageview', state.url );
+            if ( w._paq ) {
+                w._paq.push(['setGenerationTimeMs', 0]);
+                w._paq.push(['setCustomUrl', state.url]);
+                w._paq.push(['setDocumentTitle', d.title]);
+                w._paq.push(['trackPageView']);
             }
         },
         
@@ -193,13 +201,22 @@ define([
             this.gridWidth = this.views.grid.el.clientWidth;
         },
 
-        ga : function () {
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(w,d,'script','https://www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-28103020-5', 'auto');
-            ga('send', 'pageview');
+        track : function () {
+            var u="https://analytics.dotburo.org/",
+                d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+
+            g.type='text/javascript';
+            g.async=true;
+            g.defer=true;
+            g.src=u+'piwik.js';
+
+            w._paq = w._paq || [];
+            w._paq.push(['trackPageView']);
+            w._paq.push(['enableLinkTracking']);
+            w._paq.push(['setTrackerUrl', u+'piwik.php']);
+            w._paq.push(['setSiteId', '1']);
+
+            s.parentNode.insertBefore(g,s);
         }
     };
 });

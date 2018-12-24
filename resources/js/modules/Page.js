@@ -39,6 +39,9 @@ define([
                     title: this.getTitle(options.el),
                     url: slug
                 });
+            } else if (w._paq && state.time) {
+                w._paq.push(['setGenerationTimeMs', state.time - (new Date()).getTime()]);
+                w._paq.push(['trackPageView']);
             }
         };
 
