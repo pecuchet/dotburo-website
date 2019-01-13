@@ -73,7 +73,8 @@ define([
             this.options.column.innerHTML = templates.main(
                 this.el.getAttribute('data-title'),
                 options.slug,
-                this.el.getAttribute('data-img')
+                this.el.getAttribute('data-img'),
+                this.el.querySelector('time') ? this.el.querySelector('time').textContent : null
             );
 
             if (state) {

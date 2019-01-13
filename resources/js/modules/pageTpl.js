@@ -5,10 +5,11 @@ define([], function () {
             return image && !/-posterframe\./.test( image ) ? image : null
         },
 
-        main : function ( title, slug, image ) {
+        main : function ( title, slug, image, date ) {
             return '<main data-slug="'+ slug +'">'
-                        + '<article>'
-                            + '<h2>' + title + '</h2>'
+                        + '<article><header>'
+                            + (date ? '<p class="title-small"><time>' + date + '</time></p>' : '')
+                            + '<h2>' + title + '</h2></header>'
                             + ( this.allowImg( image )
                                 ? '<img src="' + image + '" alt="' + title + '">'
                                 : '' )

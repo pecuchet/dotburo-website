@@ -2,7 +2,7 @@
 /* --------------------------------------------- Main structure */
 
 #wrap {
-    padding: 5em 3.5em 4em 3.5em;
+    padding: 6.5em 3.5em 5.5em 3.5em;
     height: 100%;
 }
 #header, #footer {
@@ -137,8 +137,7 @@ header h1 {
 .content article {
     font-size: 18px;
     padding-left: 32px;
-    width: 75%;
-    max-width: 750px;
+    max-width: 900px;
 }
 .content.as-blog article {
     width: 90%;
@@ -191,11 +190,6 @@ header h1 {
         transform: translateZ(0);
     }
 }
-@media (max-width : 1024px) {
-    .content article {
-        width: 90%;
-    }
-}
 @media (max-width : 900px) {
     #wrap {
         padding: 5em 1em 4em 1em;
@@ -232,7 +226,6 @@ header h1 {
     }
     .content article {
         padding-left: 0;
-        width: 75%;
     }
     .content.as-blog article {
         width: 100%;
@@ -256,11 +249,6 @@ header h1 {
         content: '|';
         vertical-align: middle;
         height: 1em;
-    }
-}
-@media (max-width : 600px) {
-    .content article {
-        width: 100%;
     }
 }
 @media (max-width : 500px) {

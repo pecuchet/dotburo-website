@@ -57,7 +57,7 @@
 
         // Set up the page, if needed
         if (state.isSingle) {
-            app.views.page = new Page({});
+            app.views.page = new Page({}, state);
             app.views.grid.shiftGrid(d.querySelector('.col.open'), /(blog)/.test(pathname));
             app.views.grid.onColumnExpanded();
         }
