@@ -5,6 +5,13 @@
     padding: 6.5em 3.5em 5.5em 3.5em;
     height: 100%;
 }
+#header h1 {
+    line-height: 1.1;
+    padding: 1em;
+}
+#header h1 a {
+    text-decoration: none;
+}
 #header, #footer {
     position: fixed; left: 0; right: 0; z-index: 1;
     padding: 0 2.5em;
@@ -114,7 +121,7 @@ header h1 {
     text-decoration: none;
 }
 .col.blog a.item.active span {
-    display: none;
+    visibility: hidden;
 }
 
 /* --------------------------------------------- HOME : grid tooltip images */
