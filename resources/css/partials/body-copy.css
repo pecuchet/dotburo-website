@@ -1,0 +1,56 @@
+
+/* -------------------------- Markdown styles */
+
+.about h3 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 38px 0;
+}
+p {
+    margin: 1em 0;
+}
+h5, h6 {
+    line-height: inherit;
+}
+b, strong {
+    font-weight: 500 !important;
+}
+i, em {
+    font-style: italic;
+}
+sub {
+    font-variant-position: sub;
+    -moz-font-feature-settings: "subs";
+    -webkit-font-feature-settings: "subs";
+    font-feature-settings: "subs";
+}
+sup {
+    font-variant-position: super;
+    -moz-font-feature-settings: "sups";
+    -webkit-font-feature-settings: "sups";
+    font-feature-settings: "sups";
+}
+code {
+    font-size: inherit;
+}
+pre {
+    font-size: 14px;
+    background: #eee;
+    padding: 20px;
+    line-height: 1.7;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 1em 0;
+}
+p code {
+    background: #eee;
+    padding: 3px 5px;
+}
+blockquote {
+    margin: 2em 0;
+    padding: 1em 0 1em 2em;
+    border-left: 10px solid #eee;
+}
+blockquote p {
+    margin: 0;
+}

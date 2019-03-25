@@ -72,3 +72,7 @@ button {
     /*noinspection CssInvalidPropertyValue*/
     -webkit-font-smoothing: inherit;
 }
+span {
+    font-style: inherit;
+    font-weight: inherit;
+}

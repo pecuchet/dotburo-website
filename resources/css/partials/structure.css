@@ -136,14 +136,15 @@ header h1 {
 
 .content article {
     font-size: 18px;
-    padding-left: 32px;
+    padding-left: 33px;
     max-width: 900px;
+    width: 95%;
 }
 .content.as-blog article {
     width: 90%;
 }
 .content.as-blog header p {
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
 }
 .content h2 {
     margin-bottom: 38px;

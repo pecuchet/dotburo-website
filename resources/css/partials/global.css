@@ -31,35 +31,3 @@ a:hover,
     color: #FFF;
     background: #000;
 }
-
-/* -------------------------- Markdown styles */
-
-h5, h6 {
-    line-height: inherit;
-}
-b, strong {
-    font-weight: 500;
-}
-i, em {
-    font-style: italic;
-}
-sub {
-    font-variant-position: sub;
-    -moz-font-feature-settings: "subs";
-    -webkit-font-feature-settings: "subs";
-    font-feature-settings: "subs";
-}
-sup {
-    font-variant-position: super;
-    -moz-font-feature-settings: "sups";
-    -webkit-font-feature-settings: "sups";
-    font-feature-settings: "sups";
-}
-pre {
-    background: #eee;
-    padding: 20px;
-    font-size: 14px;
-    line-height: 1.7;
-    max-width: 100%;
-    overflow-x: auto;
-}

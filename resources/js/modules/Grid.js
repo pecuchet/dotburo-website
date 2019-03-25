@@ -36,7 +36,6 @@ define([
         bindHandlers: function (items) {
             var self = this,
                 i = 0, l = items.length,
-                img,
                 itemClickHandle = function (e) {
                     if (e.currentTarget.target === '_blank') {
                         return true;
@@ -59,10 +58,7 @@ define([
             for (i; i < l; i++) {
                 items[i].addEventListener('click', itemClickHandle);
 
-                img = items[i].getAttribute('data-img');
-
-                if (img && !isTouch) {
-                    self.preloadImage(img);
+                if (!isTouch && items[i].getAttribute('data-img')) {
                     items[i].addEventListener('mousemove', itemMouseMoveHandle);
                     items[i].addEventListener('mouseleave', itemMouseOutHandle);
                 }
@@ -70,11 +66,6 @@ define([
             if (!isTouch) {
                 self.thumb.addEventListener('mouseenter', itemMouseOutHandle);
             }
-        },
-
-        preloadImage: function (src) {
-            var img = new Image();
-            img.src = src;
         },
 
         /**

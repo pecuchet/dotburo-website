@@ -19,7 +19,7 @@ contenteditable area. A [demo of the extension](https://pecuchet.github.io/m-emb
 as well as [the source code](https://github.com/pecuchet/m-embed){target=_blank rel=noopener} are available on Github.  
 <br>
 The data of the URL to embed is fetched through [Embedly](http://embed.ly/cards), which handles the parsing and caching of the requested resource.
-<span class="txt-strike">Luckily [Embedly](http://embed.ly/cards) has a free basic plan which is sufficient for my purposes.</span> 
+<span class="txt-st">Luckily [Embedly](http://embed.ly/cards) has a free basic plan which is sufficient for my purposes.</span> 
 (March 24th, 2018 EDIT: it seems the service is no longer offering the free plan, or not under the same terms and with the same usability). With Embedly I don’t need to rely
 solely on OEmbed or HTML meta tags, instead I can rely on the service to receive rich meta data about the web location.  
 <br>

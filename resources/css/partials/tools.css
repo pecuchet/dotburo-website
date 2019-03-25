@@ -25,6 +25,11 @@
     line-height: 1.1;
     padding: 1em;
 }
-.txt-strike {
+
+
+.txt-st {
     text-decoration: line-through;
+}
+.txt-ul {
+    text-decoration: underline;
 }

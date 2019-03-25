@@ -211,6 +211,7 @@ define([
             g.src=u+'piwik.js';
 
             w._paq = w._paq || [];
+            w._paq.push(['setDoNotTrack', true]);
             w._paq.push(['trackPageView']);
             w._paq.push(['enableLinkTracking']);
             w._paq.push(['setTrackerUrl', u+'piwik.php']);
