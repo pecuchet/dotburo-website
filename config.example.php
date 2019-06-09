@@ -1,7 +1,7 @@
 <?php
 $config['base_url'] = 'my site URL';
 $config['site_title'] = 'my site title';
-$config['site_title_sep'] = ' • ';
+$config['site_title_sep'] = ' ›_&thinsp;';
 $config['site_author'] = 'my name';
 $config['site_email'] = 'my email';
 $config['site_description'] = 'my site';

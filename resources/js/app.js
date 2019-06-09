@@ -112,7 +112,7 @@ define([
         resetDocument : function ( state ) {
             d.title = state.url === '/'
                 ? this.initial.siteTitle
-                : state.title + ' • ' + this.initial.siteTitle;
+                : state.title + ' ›_ ' + this.initial.siteTitle;
 
             if ( w._paq ) {
                 w._paq.push(['setGenerationTimeMs', 0]);

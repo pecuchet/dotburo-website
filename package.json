@@ -18,16 +18,16 @@
     "url": "https://github.com/pecuchet/dotburo-website.git"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
     "almond": "^0.3.3",
-    "grunt-exec": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
+    "grunt": "^0.4.5",
     "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-htmlmin": "^2.4.0",
-    "grunt-contrib-requirejs": "^1.0.0"
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-exec": "^1.0.1"
   },
   "dependencies": {
     "go-scroll-to": "^1.0.3",
-    "requirejs": "^2.3.5"
+    "requirejs": "^2.3.6"
   }
 }
