@@ -5,12 +5,8 @@
     padding: 6.5em 3.5em 5.5em 3.5em;
     height: 100%;
 }
-#header h1 {
-    line-height: 1.1;
-    padding: 1em;
-}
 #header h1 a {
-    text-decoration: none;
+    display: block;
 }
 #header, #footer {
     position: fixed; left: 0; right: 0; z-index: 1;
@@ -53,7 +49,6 @@ header h1 {
     vertical-align: top;
     width: 11%; height: 100%;
     padding: 0 2em;
-    border-right: 2px solid;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -94,31 +89,25 @@ header h1 {
     max-width: 350px;
 }
 .item h3 {
-    font-size: 28px;
+    font-size: 40px;
     line-height: 1.15;
+    font-weight: 700;
 }
-.no-touch a.item:focus h3,
-.no-touch a.item.active h3 {
+a.item h3 {
     text-decoration: underline;
-}
-.item span {
-    visibility: hidden;
-    text-decoration: none;
-    text-transform: lowercase;
-}
-.no-touch a.item:focus span,
-.no-touch a.item:hover span {
-    visibility: visible;
 }
 .item time {
     font-size: 11px;
 }
-.col.blog a.item h3 {
-    text-decoration: underline;
+.item span {
+    visibility: hidden;
+    text-transform: lowercase;
 }
-.col.blog a.item.active h3,
-.no-touch .col.blog a.item:hover h3 {
+.no-touch a.item.active h3 {
     text-decoration: none;
+}
+.no-touch a.item:hover span {
+    visibility: visible;
 }
 .col.blog a.item.active span {
     visibility: hidden;
@@ -160,7 +149,7 @@ header h1 {
     text-transform: none;
     font-size: 40px;
     line-height: 1.2;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: normal;
 }
 .content img, video {

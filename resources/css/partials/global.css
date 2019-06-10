@@ -2,26 +2,22 @@
 /* -------------------------- Global styles */
 
 body {
-    font: 1.6em/1.5 aktiv-grotesk, 'Helvetica Neue', sans-serif;
-    font-variant-ligatures: common-ligatures;
-    -moz-font-feature-settings: "liga", "clig";
-    -webkit-font-feature-settings: "liga", "clig";
-    font-feature-settings: "liga", "clig";
+    font: 1.6em/1.5 'Helvetica Neue', Helvetica, sans-serif;
     overflow: hidden;
 }
-a,
-.btn-link {
-    color: #000;
-    text-decoration: underline;
+a, .btn-link {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-a:focus,
-a:hover,
-.btn-link:focus,
-.btn-link:hover,
-.btn-link:active,
-.btn-link.active {
+a:visited {
+    color: #00F;
+}
+.btn-link,
+.btn-link:visited {
+    color: #000;
     text-decoration: none;
+}
+.btn-link:hover {
+    text-decoration: underline;
 }
 ::-moz-selection {
     color: #FFF;
