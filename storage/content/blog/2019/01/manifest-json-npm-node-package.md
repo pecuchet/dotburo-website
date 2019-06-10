@@ -1,7 +1,7 @@
 /*
-Title: Minimani references web assets with a cache busting suffix in a manifest.json file
+Title: Minimani manifest.json
 Date: 2019-01-13
-Modified: 2019-01-13
+Modified: 2019-06-10
 Read: 1
 Keywords: node, npm, manifest
 */

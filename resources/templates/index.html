@@ -18,7 +18,6 @@
     <link rel="mask-icon" href="/resources/images/dotburo_icon-black.svg" color="#0000ff">
     <meta name="theme-color" content="#ffffff">
     <style>{{source('/css/index.min.css')}}</style>
-    <link rel="stylesheet" href="https://use.typekit.net/ocs3rka.css">
     <link rel="alternate" type="application/atom+xml" title="{{ site_title }}'s news and projects" href="{{ base_url }}/feed">
     <meta id="site-title" property="og:site_name" content="{{ site_title }}">
     <meta property="og:title" content="{{ is_front_page ? site_title : current_page.title~config.site_title_sep~site_title }}">
@@ -36,7 +35,7 @@
 <div id="wrap" itemscope itemtype="http://schema.org/Organization">
     <header id="header">
         <h1 itemprop="name">
-            <a href="{{ base_url }}">{{ site_title }}</a>
+            <a href="{{ base_url }}" class="btn-link">{{ site_title }}</a>
         </h1>
         <a itemprop="url" href="{{ base_url }}" id="btn-close" class="{{ is_single ? '' : 'hide '}}right btn-link">&times;</a>
         <meta itemprop="logo" content="{{ base_url }}/resources/images/dotburo_opengraph.jpg">
@@ -63,7 +62,7 @@
                         <a href="tel:+32483094922"><span itemprop="telephone">+32 (0) 483 094 922</span></a>
                         <br><br>
                         <a rel="alternate" href="{{ base_url }}/feed">RSS</a> &bull;
-                        <a href="https://github.com/pecuchet" target="_blank" rel="noopener" itemprop="sameAs">Github</a><br><br>&#x2668;
+                        <a href="https://github.com/dotburo" target="_blank" rel="noopener" itemprop="sameAs">Github</a><br><br>&#x2668;
                     </address>
                 </div>
             </footer>
