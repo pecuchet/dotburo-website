@@ -6,7 +6,7 @@
     "Pico"
   ],
   "homepage": "https://dotburo.org/",
-  "version": "5.3.0",
+  "version": "5.3.1",
   "main": "resources/js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
