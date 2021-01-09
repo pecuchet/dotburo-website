@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
     var path = require('path'),
-        config = require('./config-deploy');
+        config = require('./config.json');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),

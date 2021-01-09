@@ -6,7 +6,7 @@ vendor
 node_modules
 storage/cache/*
 config.php
-config-deploy.js
+config.js
 storage/portfolio/*
 storage/**/*.jpg
 storage/**/*.png

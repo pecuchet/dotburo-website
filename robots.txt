@@ -6,7 +6,6 @@ Disallow: /*
 User-agent: *
 Disallow: /vendor/*
 Disallow: /browser/*
-Disallow: /coolsaet/*
 Disallow: /leontine/*
 Disallow: /storage/cache/*
 Disallow: /storage/portfolio/*

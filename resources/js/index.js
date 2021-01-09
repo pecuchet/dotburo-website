@@ -8,8 +8,7 @@
     require.config({
         baseUrl: '/resources/js',
         paths: {
-            xhr: "vendor/xhr",
-            goScroll: "vendor/goScroll",
+            goScroll: "../../node_modules/go-scroll-to/goScroll",
             d1: "modules/d1",
 
             app: "app",

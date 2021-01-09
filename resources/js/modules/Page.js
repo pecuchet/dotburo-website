@@ -1,9 +1,8 @@
 define([
     'app',
     'templates',
-    'xhr',
     'gistHandle'
-], function (app, templates, xhr, gistHandle) {
+], function (app, templates, gistHandle) {
     'use strict';
 
     var w = window,
@@ -27,8 +26,6 @@ define([
             if (!(app.initial.isSingle && app.initial.pageLoad)) {
                 this.fetch(options, state);
                 app.toggleCloseBtn(1);
-            } else {
-                this.gaTrackVideo();
             }
 
             // on page load and through history,
@@ -39,9 +36,6 @@ define([
                     title: this.getTitle(options.el),
                     url: slug
                 });
-            } else if (w._paq && state.time) {
-                w._paq.push(['setGenerationTimeMs', state.time - (new Date()).getTime()]);
-                w._paq.push(['trackPageView']);
             }
         };
 
@@ -81,28 +75,25 @@ define([
                 return this.render(app.data[options.id]);
             }
 
-            xhr({
-                url: options.slug.replace(/\/$/, '') + '?get',  // 'blog/title/?get' returns 404
-                success: function (r) {
-                    if (r.errors) {
-                        r.content = '<p class="err-xhr"> ¡SERVER ERROR &mdash; NO DATA RETRIEVED! </p>';
-                    }
+            w.fetch(options.slug.replace(/\/$/, '') + '?get')
+                .then(function (r) {
+                    return r.json()
+                })
+                .then(function (r) {
                     app.data[options.id] = r;
                     self.render(r);
-                },
-                error: function (xhr, status, error) {
+                })
+                .catch(function (error) {
                     self.render({
-                        content: '<p class="err-xhr"> ¡NETWORK ERROR [' + status + '] &mdash; ' + error.toString().toUpperCase() + '! </p>'
+                        content: '<p class="err-xhr"> ¡NETWORK ERROR [' + error.status + '] &mdash; ' + error.toString().toUpperCase() + '! </p>'
                     });
-                }
-            });
+                })
         },
 
         render: function (data) {
             var parent = this.options.column.getElementsByClassName('xhr-root')[0];
             parent.innerHTML = templates.content(data);
             this.evalGists(parent);
-            this.gaTrackVideo();
         },
 
         evalGists: function (parent) {
@@ -115,33 +106,6 @@ define([
         destroy: function () {
             this.options.column.innerHTML = '';
         },
-
-        gaTrackVideo : function () {
-            var videos = this.options.column.getElementsByTagName('video'),
-                l = videos.length, i = 0,
-                sentWatched = {},
-                sentPlay = {},
-                play = function () {
-                    // play started, only sent once
-                    if ( !sentPlay[this.currentSrc] ) {
-                        w.ga( 'send', 'event', 'Videos', 'Play', this.currentSrc );
-                        sentPlay[this.currentSrc] = 1;
-                    }
-                },
-                watched = function () {
-                    var currentTime = this.currentTime;
-                    // Watched 75%, only send once
-                    if ( !sentWatched[this.currentSrc] && ( currentTime > 0.75 * ( this.duration ) ) ) {
-                        w.ga( 'send', 'event', 'Videos', 'Watched 75%', this.currentSrc );
-                        sentWatched[this.currentSrc] = 1;
-                    }
-                };
-
-            for ( i; i < l; i++ ) {
-                videos[i].addEventListener( 'play', play );
-                videos[i].addEventListener( 'timeupdate', watched );
-            }
-        }
     };
     return Page;
 });

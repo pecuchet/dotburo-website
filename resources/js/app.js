@@ -24,7 +24,6 @@ define([
             this.closeBtn = d.getElementById( 'btn-close' );
             this.contactBtn = d.getElementById( 'btn-contact' );
 
-            this.track();
             this.setSizable();
             this.bindHandlers();
             this.load();
@@ -113,13 +112,6 @@ define([
             d.title = state.url === '/'
                 ? this.initial.siteTitle
                 : state.title + ' ›_ ' + this.initial.siteTitle;
-
-            if ( w._paq ) {
-                w._paq.push(['setGenerationTimeMs', 0]);
-                w._paq.push(['setCustomUrl', state.url]);
-                w._paq.push(['setDocumentTitle', d.title]);
-                w._paq.push(['trackPageView']);
-            }
         },
         
         toggleCloseBtn : function ( show, test ) {
@@ -201,23 +193,5 @@ define([
             this.gridWidth = this.views.grid.el.clientWidth;
         },
 
-        track : function () {
-            var u="https://analytics.dotburo.org/",
-                d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-
-            g.type='text/javascript';
-            g.async=true;
-            g.defer=true;
-            g.src=u+'piwik.js';
-
-            w._paq = w._paq || [];
-            w._paq.push(['setDoNotTrack', true]);
-            w._paq.push(['trackPageView']);
-            w._paq.push(['enableLinkTracking']);
-            w._paq.push(['setTrackerUrl', u+'piwik.php']);
-            w._paq.push(['setSiteId', '1']);
-
-            s.parentNode.insertBefore(g,s);
-        }
     };
 });

@@ -8,19 +8,6 @@ define([], function () {
             isTouch: 'ontouchstart' in w || navigator.MaxTouchPoints > 0 || navigator.msMaxTouchPoints > 0
         };
 
-    /*
-     |--------------------------------------------------------------------------
-     | Utilities
-     |--------------------------------------------------------------------------
-     |
-     |
-     */
-
-    D.isIE9 = function () {
-        var nav = navigator.userAgent.toLowerCase();
-        return ( nav.indexOf('msie') !== -1 ) ? parseInt( nav.split('msie')[1] ) === 9 : false;
-    };
-
     D.debounce = function (func, wait, immediate) {
         var timeout;
         return function() {
@@ -33,14 +20,6 @@ define([], function () {
             if (immediate && !timeout) func.apply(context, args);
         };
     };
-
-    /*
-     |--------------------------------------------------------------------------
-     | DOM functions
-     |--------------------------------------------------------------------------
-     |
-     |
-     */
 
     D.parent = function( element, tagname ) {
         tagname = tagname.toLowerCase();
